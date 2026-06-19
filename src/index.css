@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-dark: #10374a;
+  --color-brand-accent: #ccfe18;
+  --color-brand-lime: #a5fd0c;
+  --color-brand-orange: #d66632;
+  --color-brand-gold: #e99520;
+  --color-brand-deep: #100d32;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
