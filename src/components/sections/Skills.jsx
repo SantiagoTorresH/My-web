@@ -41,7 +41,7 @@ export function Skills() {
                   {name}
                 </p>
                 <span className="inline-block self-start rounded-md bg-orange-500/10 px-2.5 py-1 text-xs font-medium text-orange-400 border border-orange-500/10">
-                  {level}
+                  {level} 
                 </span>
               </div>
             </div>

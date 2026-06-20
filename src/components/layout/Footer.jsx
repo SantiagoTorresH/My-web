@@ -18,7 +18,7 @@ export function Footer() {
         <div className="grid gap-10 md:grid-cols-[1.2fr_0.9fr_1fr]">
           <div>
             <p className="mb-3 inline-flex rounded-full border border-brand-lime/20 bg-brand-lime/10 px-3 py-1 text-xs font-medium tracking-[0.24em] text-brand-lime uppercase">
-              Portafolio
+              My - portafolio
             </p>
             <h2 className="mb-4 max-w-md text-3xl font-semibold leading-tight sm:text-4xl">
               Gracias por visitar mi pagina web.

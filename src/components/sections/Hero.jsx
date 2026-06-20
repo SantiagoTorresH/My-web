@@ -34,7 +34,7 @@ export function Hero() {
     [perspective:1000px]
     transition-all
     duration-300
-    hover:scale-105
+    hover:scale-105 rounded-full border-2 border-brand-gold bg-brand-dark text-4xl font-bold text-brand-accent
     hover:shadow-[0_0_25px_rgba(163,230,53,0.6)] "
     style ={{animation: 'float 2s ease-in-out infinite'}}
         >
