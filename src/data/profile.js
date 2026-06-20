@@ -66,14 +66,14 @@ export const profile = {
   // ],
 
   projects: [
-    {
-      title: "Portfolio personal",
-      description:
-        "Landing page interactiva con React, Tailwind y animaciones Canvas. ",
-      tech: ["React", "Tailwind", "Vite"],
-      href: "#",
-      gradient: "from-brand-dark to-brand-deep",
-    },
+    // {
+    //   title: "Portfolio personal",
+    //   description:
+    //     "Landing page interactiva con React, Tailwind y animaciones Canvas. ",
+    //   tech: ["React", "Tailwind", "Vite"],
+    //   href: "#",
+    //   gradient: "from-brand-dark to-brand-deep",
+    // },
     //colocamos img de movil-dev en vez del gradient
     {
       title: "Móvil-Dev E-commerce",
@@ -112,9 +112,19 @@ export const profile = {
     },
 
     {
+      title: "SisSalud Rural — Gestión Médica e Inteligencia Epidemiológica",
+      description:
+        "[PROYECTO EN DESARROLLO] Sistema de información médica de impacto social diseñado para la gestión de historias clínicas en centros de salud rurales. Cuenta con arquitectura Full-Stack en TypeScript, un motor de alertas epidemiológicas automatizado asistido por IA (Gemini API) y cumplimiento normativo estricto para el tratamiento de datos personales (Ley 1581).",
+      tech: ["TypeScript", "Node.js", "MongoDB", "React", "Gemini API"],
+      img: "/img/image7.png",
+      href: "https://sis-salud-rural1.vercel.app/", // Reemplázalo por tu repositorio o link de Vercel cuando lo tengas
+      gradient: "from-cyan-600 via-teal-500 to-emerald-500", // Gradiente en tonos médicos/salud (cián y esmeralda) que resalta mucho visualmente
+    },
+
+    {
       title: "Universidad Digital",
       description:
-        "Plataforma integral de gestión académica. Implementa control de accesos basado en roles (Admin, Docente, Estudiante), API modular por dominios en FastAPI, interfaz responsiva en React y un pipeline de integración continua con GitHub Actions.",
+        " [PROYECTO EN DESARROLLO-Migrando db, de gcp a mongodb]Plataforma integral de gestión académica. Implementa control de accesos basado en roles (Admin, Docente, Estudiante), API modular por dominios en FastAPI, interfaz responsiva en React y un pipeline de integración continua con GitHub Actions.",
       tech: ["FastAPI", "React", "PostgreSQL", "Docker", "GitHub Actions"],
       img: "/img/image6.png",
       href: "https://universidad-digital-end-11.vercel.app/login", // Coloca el enlace aquí

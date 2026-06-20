@@ -29,7 +29,7 @@ export function About() {
         {/* Ubicación en formato de Tag estilizado */}
         <div className="mt-8 inline-flex items-center space-x-2 rounded-full bg-slate-900 border border-white/10 px-4 py-1.5 text-sm text-slate-400 shadow-sm">
           <span className="text-base">📍</span>
-          <span className="font-medium text-slate-300">{profile.location}</span>
+          <span className="font-medium text-slate-300">{profile.location} - remoto</span>
         </div>
       </div>
     </section>

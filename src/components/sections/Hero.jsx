@@ -2,7 +2,7 @@ import { useState } from "react";
 import { profile } from "../../data/profile";
 import { NeuronCanvas } from "../NeuronCanvas";
 //importamos la foto de perfil que esta en la carpeta assets
-import imageprofile from "../../assets/profile.jpg";
+import imageprofile from "../../../public/img/profile.jpg";
 
 // comocar img al hacer click en las iniciales y que sea como una tarjeta que se volte y muestre la img
 export function Hero() {
