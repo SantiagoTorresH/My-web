@@ -100,61 +100,61 @@ export const profile = {
       href: "https://solution-reto-8.vercel.app/login",
       gradient: "from-blue-500 to-indigo-600", // Un gradiente corporativo y limpio para desarrollo MERN
     },
+
+    {
+      title: "easyBooking — Sistema de Citas Full-Stack",
+      description:
+        "[PROYECTO EN DESARROLLO] Plataforma integral para la reserva y automatización de turnos en tiempo real. Cuenta con un backend desarrollado en Node.js/Express, persistencia de datos relacionales lógicos mediante esquemas de Mongoose con MongoDB, y una interfaz de usuario fluida y reactiva en React y Vite.",
+      tech: ["Node.js", "Express", "MongoDB", "React", "Tailwind CSS"],
+      img: "/img/image5.png",
+      href: "https://easybookingfront.vercel.app", // Link de tu cliente web
+      gradient: "from-indigo-600 via-purple-600 to-pink-500",
+    },
+
     {
       title: "Universidad Digital",
       description:
         "Plataforma integral de gestión académica. Implementa control de accesos basado en roles (Admin, Docente, Estudiante), API modular por dominios en FastAPI, interfaz responsiva en React y un pipeline de integración continua con GitHub Actions.",
       tech: ["FastAPI", "React", "PostgreSQL", "Docker", "GitHub Actions"],
-      img: "/img/image5.png",
+      img: "/img/image6.png",
       href: "https://universidad-digital-end-11.vercel.app/login", // Coloca el enlace aquí
       gradient: "from-emerald-600 to-teal-500", // Un gradiente verde/esmeralda ideal para plataformas educativas
     },
-    
 
-//     dmin:
+    //     dmin:
 
-// Usuario: admin@ud.edu
-// Clave: AdminPass1234
+    // Usuario: admin@ud.edu
+    // Clave: AdminPass1234
 
-// Docentes: 
+    // Docentes:
 
-// Email: docente@ud.edu
-// Password: DocentePass1234
+    // Email: docente@ud.edu
+    // Password: DocentePass1234
 
-// profe1@ud.edu
-// profe12345678
+    // profe1@ud.edu
+    // profe12345678
 
-// profe2@ud.edu
-// profe22345678
+    // profe2@ud.edu
+    // profe22345678
 
-// Estudiantes: 
+    // Estudiantes:
 
-// Email: estudiante@ud.edu
-// Password: EstudiantePass1234
+    // Email: estudiante@ud.edu
+    // Password: EstudiantePass1234
 
-// estudiante2@edu.co
-// estudiante12345678
+    // estudiante2@edu.co
+    // estudiante12345678
 
-// santiago@gmail.com
-// santi123
+    // santiago@gmail.com
+    // santi123
 
-// pedrito@gmail.com
-// pedrito12345678
-
-{
-  title: 'easyBooking — Sistema de Citas Full-Stack',
-  description:
-    '[PROYECTO EN DESARROLLO] Plataforma integral para la reserva y automatización de turnos en tiempo real. Cuenta con un backend desarrollado en Node.js/Express, persistencia de datos relacionales lógicos mediante esquemas de Mongoose con MongoDB, y una interfaz de usuario fluida y reactiva en React y Vite.',
-  tech: ['Node.js', 'Express', 'MongoDB', 'React', 'Tailwind CSS'],
-  img: '/img/image5.png',
-  href: 'https://easybookingfront.vercel.app', // Link de tu cliente web
-  gradient: 'from-indigo-600 via-purple-600 to-pink-500', 
-},
+    // pedrito@gmail.com
+    // pedrito12345678
 
     {
       title: "Próximo proyecto, trabajando en ello...",
       description:
-        "Espacio reservado para un sistema de gestion de inventario de productos. Implementa una API REST con arquitectura segura (JWT/bcrypt), persistencia en MongoDB y un frontend reactivo y responsivo con filtrado dinámico en tiempo real.",
+        "Espacio reservado para un sistema de gestion de inventario de productos. Implementa una API REST con arquitectura segura (JWT/bcrypt), persistencia en MongoDB y un frontend reactivo y responsivo con filtrado dinámico en tiempo real, con lector de codigos de barras, todo como en una tienda..",
       tech: ["React", "Node.js", "API"],
       href: "#",
       gradient: "from-brand-lime/30 to-brand-accent/20",

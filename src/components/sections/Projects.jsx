@@ -22,7 +22,7 @@ export function Projects() {
             Proyectos
           </h2>
           <p className="mt-2 text-base text-slate-400">
-            Trabajo reciente y proyectos personales.
+            Trabajos reciente y proyectos personales.
           </p>
         </div>
 
