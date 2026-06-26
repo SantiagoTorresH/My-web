@@ -30,22 +30,54 @@ export const profile = {
   ],
 
   skills: [
-    { name: "React", level: "Intermedio" },
-    { name: "JavaScript", level: "Avanzado" },
-    { name: "HTML & CSS", level: "Avanzado" },
-    { name: "Tailwind CSS", level: "Intermedio" },
-    { name: "Git", level: "Intermedio" },
-    { name: "GitHub", level: "Avanzado" },
-    { name: "Node.js", level: "Intermedio" },
-    { name: "Responsive Design", level: "Intermedio" },
-    { name: "UI/UX", level: "Intermedio" },
-    { name: "Python", level: "Avanzado" },
-    { name: "C#", level: "Intermedio" },
-    { name: "SQL", level: "Avanzado" },
-    { name: "MongoDB", level: "Intermedio" },
-    { name: "Power BI", level: "Intermedio" },
-    { name: "Docker", level: "Intermedio" },
-    { name: "Linux", level: "Intermedio" },
+    {
+      category: "Frontend",
+      items: [
+        { name: "React", level: "Intermedio", proficiency: 70 },
+        { name: "JavaScript", level: "Avanzado", proficiency: 85 },
+        { name: "HTML & CSS", level: "Avanzado", proficiency: 95 },
+        { name: "Tailwind CSS", level: "Intermedio", proficiency: 90 },
+        { name: "Responsive Design", level: "Intermedio", proficiency: 80 },
+        { name: "UI/UX", level: "Intermedio", proficiency: 75 },
+      ],
+    },
+    {
+      category: "Backend",
+      items: [
+        { name: "Node.js", level: "Intermedio", proficiency: 75 },
+        { name: "Python", level: "Avanzado", proficiency: 85 },
+        { name: "C#", level: "Intermedio", proficiency: 70 },
+        
+        { name: "Express", level: "Intermedio", proficiency: 70 },
+        
+        { name: "REST API", level: "Intermedio", proficiency: 70 },
+
+      ],
+    },
+    {
+      category: "Bases de datos",
+      items: [
+        { name: "SQL", level: "Avanzado", proficiency: 90 },
+        { name: "MongoDB", level: "Intermedio", proficiency: 75 },
+        { name: "MySQL", level: "Intermedio", proficiency: 70 },
+        { name: "SQLite", level: "Intermedio", proficiency: 70 },
+        { name: "Firebase", level: "Intermedio", proficiency: 70 },
+        { name: "PostgreSQL", level: "Intermedio", proficiency: 70 },
+        { name: "Power BI", level: "Intermedio", proficiency: 70 },
+      ],
+    },
+    {
+      category: "Herramientas",
+      items: [
+        { name: "Git", level: "Intermedio", proficiency: 75 },
+        { name: "GitHub", level: "Avanzado", proficiency: 85 },
+        { name: "Docker", level: "Intermedio", proficiency: 70 },
+        { name: "Linux", level: "Intermedio", proficiency: 70 },
+        { name: "vscode", level: "Avanzado", proficiency: 90 },
+        { name: "Postman", level: "Intermedio", proficiency: 70 },
+
+      ],
+    },
   ],
 
   // experience: [

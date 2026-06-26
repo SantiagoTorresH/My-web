@@ -26,25 +26,57 @@ export function Skills() {
           </p>
         </div>
 
-        {/* Grid de Tarjetas Modernas */}
-        <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {profile.skills.map(({ name, level }) => (
-            <div
-              key={name}
-              className="group relative overflow-hidden rounded-xl border border-white/10 bg-slate-900/60 p-5 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-orange-500/40 hover:bg-slate-900/90 hover:shadow-xl hover:shadow-orange-500/5"
+        {/* Grid de categorías de habilidades */}
+        <div className="grid gap-6 lg:grid-cols-2">
+          {profile.skills.map((category) => (
+            <article
+              key={category.category}
+              className="rounded-3xl border border-white/10 bg-slate-900/60 p-6 shadow-lg shadow-slate-950/10 backdrop-blur-sm"
             >
-              {/* Sutil línea de brillo en el hover */}
-              <div className="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-orange-500 to-amber-400 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-              
-              <div className="flex flex-col justify-between h-full space-y-2">
-                <p className="font-semibold text-slate-100 group-hover:text-white transition-colors">
-                  {name}
-                </p>
-                <span className="inline-block self-start rounded-md bg-orange-500/10 px-2.5 py-1 text-xs font-medium text-orange-400 border border-orange-500/10">
-                  {level} 
-                </span>
+              <h3 className="text-lg font-semibold text-white">
+                {category.category}
+              </h3>
+              <p className="mt-2 text-sm text-slate-400">
+                {category.items.length} tecnologías y herramientas.
+              </p>
+
+              <div className="mt-6 space-y-4">
+                {category.items.map(({ name, level, proficiency }) => (
+                  <div key={name} className="rounded-3xl border border-white/10 bg-slate-950/70 p-4">
+                    <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                      <div>
+                        <p className="font-medium text-slate-100">{name}</p>
+                        <span className="text-xs uppercase tracking-[0.22em] text-orange-300/90">
+                          {level}
+                        </span>
+                      </div>
+                      <div className="flex items-center gap-2 text-amber-300">
+                        {Array.from({ length: 5 }).map((_, index) => (
+                          <span
+                            key={index}
+                            className={
+                              index < Math.round(proficiency / 20)
+                                ? 'text-amber-300'
+                                : 'text-slate-700'
+                            }
+                          >
+                            ★
+                          </span>
+                        ))}
+                        <span className="text-xs text-slate-400">{proficiency}%</span>
+                      </div>
+                    </div>
+
+                    <div className="mt-4 h-2.5 overflow-hidden rounded-full bg-slate-800">
+                      <div
+                        className="h-full rounded-full bg-gradient-to-r from-orange-400 to-amber-300"
+                        style={{ width: `${proficiency}%` }}
+                      />
+                    </div>
+                  </div>
+                ))}
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>
