@@ -1,4 +1,4 @@
-import { navLinks, profile } from '../../data/profile'
+import { profile } from '../../data/profile'
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
 import { MdEmail, MdLocationOn } from 'react-icons/md'
 
@@ -8,7 +8,7 @@ const socialIcons = {
   Email: MdEmail,
 }
 
-export function Footer() {
+export function Footer({ t }) {
   const year = new Date().getFullYear()
 
   return (
@@ -18,22 +18,22 @@ export function Footer() {
         <div className="grid gap-10 md:grid-cols-[1.2fr_0.9fr_1fr]">
           <div>
             <p className="mb-3 inline-flex rounded-full border border-brand-lime/20 bg-brand-lime/10 px-3 py-1 text-xs font-medium tracking-[0.24em] text-brand-lime uppercase">
-              My - portafolio
+              {t.footer.portfolio}
             </p>
             <h2 className="mb-4 max-w-md text-3xl font-semibold leading-tight sm:text-4xl">
-              Gracias por visitar mi pagina web.
+              {t.footer.thanks}
             </h2>
             <p className="max-w-xl text-sm leading-6 text-white/65 sm:text-base">
-              Me gusta construir interfaces claras, rápidas y con buen detalle visual. Si algo de este portafolio te llamó la atención, puedes escribirme o revisar mis proyectos desde aquí.
+              {t.footer.description}
             </p>
           </div>
 
           <div>
             <h3 className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-white/70">
-              Navegación rápida
+              {t.footer.quickNav}
             </h3>
             <ul className="grid gap-3 sm:grid-cols-2">
-              {navLinks.map(({ href, label }) => (
+              {t.navLinks.map(({ href, label }) => (
                 <li key={href}>
                   <a
                     href={href}
@@ -51,7 +51,7 @@ export function Footer() {
 
           <div>
             <h3 className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-white/70">
-              Contacto y redes
+              {t.footer.contact}
             </h3>
             <div className="space-y-3">
               <a
@@ -90,9 +90,9 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col gap-3 border-t border-white/10 pt-6 text-sm text-white/50 sm:flex-row sm:items-center sm:justify-between">
           <p>
-            &copy; {year} {profile.name.trim()}. Todos los derechos reservados.
+            &copy; {year} {profile.name.trim()}. {t.footer.rights}
           </p>
-          <p>Construido con React, Vite y Tailwind CSS.</p>
+          <p>{t.footer.builtWith}</p>
         </div>
       </div>
     </footer>

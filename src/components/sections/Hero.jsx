@@ -1,19 +1,17 @@
-import { useState } from "react";
-import { profile } from "../../data/profile";
-import { NeuronCanvas } from "../NeuronCanvas";
+import { useState } from "react"
+import { profile } from "../../data/profile"
+import { NeuronCanvas } from "../NeuronCanvas"
 //importamos la foto de perfil que esta en la carpeta assets
-import imageprofile from "../../../public/img/profile.jpg";
+import imageprofile from "../../../public/img/profile.jpg"
 
 // comocar img al hacer click en las iniciales y que sea como una tarjeta que se volte y muestre la img
-export function Hero() {
-  // const [showImage, setShowImage] = useState(true);
-  const [flipped, setFlipped] = useState(true);
+export function Hero({ t }) {
+  const [flipped, setFlipped] = useState(true)
 
   const initials = profile.name
-
     .split(" ")
     .map((n) => n[0])
-    .join("");
+    .join("")
 
   return (
     <section
@@ -36,7 +34,7 @@ export function Hero() {
     duration-300
     hover:scale-105 rounded-full border-2 border-brand-gold bg-brand-dark text-4xl font-bold text-brand-accent
     hover:shadow-[0_0_25px_rgba(163,230,53,0.6)] "
-    style ={{animation: 'float 2s ease-in-out infinite'}}
+          style={{ animation: 'float 2s ease-in-out infinite' }}
         >
           <div
             className={`relative h-full w-full rounded-full transition-transform duration-700 [transform-style:preserve-3d] ${
@@ -59,45 +57,31 @@ export function Hero() {
           </div>
         </div>
 
-        {/* <div
-        onClick={() => setShowImage(!showImage)}
-        className="flex h-32 w-32 shrink-0 items-center justify-center rounded-full border-2 border-brand-gold bg-brand-dark text-4xl font-bold text-brand-accent">
-          {showImage ? (
-            <img
-              src={imageprofile}
-              alt="Foto de perfil"
-              className="h-full w-full rounded-full object-cover"
-            />
-          ) : (
-            <span>{initials}</span>
-          )}
-        </div> */}
-
         <div className="flex-1">
           {profile.available && (
             <span className="mb-3 inline-block rounded-full border border-brand-lime/40 bg-brand-lime/10 px-3 py-1 text-xs text-brand-lime">
-              Disponible para oportunidades
+              {t.hero.available}
             </span>
           )}
 
           <h1 className="mb-2 text-4xl font-bold text-white sm:text-5xl">
             {profile.name}
           </h1>
-          <p className="mb-4 text-xl text-brand-accent">{profile.role}</p>
-          <p className="mb-6 max-w-2xl text-white/75">{profile.tagline}</p>
+          <p className="mb-4 text-xl text-brand-accent">{t.profile.role}</p>
+          <p className="mb-6 max-w-2xl text-white/75">{t.profile.tagline}</p>
 
           <div className="flex flex-wrap justify-center gap-3 sm:justify-start">
             <a
               href="#contacto"
               className="rounded-lg bg-brand-lime px-6 py-3 font-medium text-brand-dark transition hover:bg-brand-accent"
             >
-              Contáctame
+              {t.hero.contact}
             </a>
             <a
               href={profile.cvUrl}
               className="rounded-lg border border-white/30 px-6 py-3 font-medium text-white transition hover:border-brand-lime hover:text-brand-lime"
             >
-              Descargar CV
+              {t.hero.downloadCv}
             </a>
             <a
               href={profile.social[1].href}
@@ -105,11 +89,11 @@ export function Hero() {
               rel="noopener noreferrer"
               className="rounded-lg border border-white/30 px-6 py-3 font-medium text-white transition hover:border-brand-lime hover:text-brand-lime"
             >
-              Ver GitHub
+              {t.hero.viewGithub}
             </a>
           </div>
         </div>
       </div>
     </section>
-  );
+  )
 }

@@ -1,6 +1,6 @@
 import { profile } from '../../data/profile'
 
-export function Projects() {
+export function Projects({ t }) {
   return (
     <section 
       id="proyectos" 
@@ -19,16 +19,21 @@ export function Projects() {
         {/* Encabezado Coherente y Limpio */}
         <div className="mb-12 border-l-4 border-orange-500 pl-4">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-white">
-            Proyectos
+            {t.projects.title}
           </h2>
           <p className="mt-2 text-base text-slate-400">
-            Algunos proyectos recientes y personales.
+            {t.projects.subtitle}
           </p>
         </div>
 
         {/* Grid de Proyectos */}
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {profile.projects.map(({ title, description, tech, href, gradient, img }) => (
+          {profile.projects.map(({ tech, href, gradient, img }, index) => {
+            const projectCopy = t.projects.items[index]
+            const title = projectCopy?.title ?? profile.projects[index].title
+            const description = projectCopy?.description ?? profile.projects[index].description
+
+            return (
             <a
               key={title}
               href={href}
@@ -62,18 +67,19 @@ export function Projects() {
 
                 {/* Badges de Tecnologías (Tags) */}
                 <div className="flex flex-wrap gap-2">
-                  {tech.map((t) => (
+                  {tech.map((techName) => (
                     <span
-                      key={t}
+                      key={techName}
                       className="rounded-md bg-white/5 border border-white/5 px-2.5 py-0.5 text-xs font-medium text-brand-lime group-hover:border-brand-lime/20 transition-colors"
                     >
-                      {t}
+                      {techName}
                     </span>
                   ))}
                 </div>
               </div>
             </a>
-          ))}
+            )
+          })}
         </div>
       </div>
     </section>

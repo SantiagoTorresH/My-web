@@ -1,6 +1,6 @@
 export const profile = {
-  name: "Santiago Torres ",
-  role: "Desarrollador Frontend | Estudiante de Ingenieria de Sistemas | Junior Developer | Html | Css | JavaScript | TypeScript | React | Python | c# | Git | GitHub | Node.Js | Sql | MongoDB | Power BI |",
+  name: "Santiago Torres H",
+  role: "Desarrollador Full Stack | Estudiante de Ingenieria de Sistemas | Html | Css | JavaScript | TypeScript | React | Python | c# | Git | GitHub | Node.Js | Sql | MongoDB | Power BI |",
   tagline:
     "Construyo interfaces web modernas, accesibles y con buen rendimiento. Me apasiona React, el diseño limpio y resolver problemas con código.",
   location: "Colombia",
@@ -204,11 +204,217 @@ export const profile = {
   ],
 };
 
-export const navLinks = [
-  { href: "#inicio", label: "Inicio" },
-  { href: "#sobre-mi", label: "Sobre mí" },
-  { href: "#habilidades", label: "Habilidades" },
-  // { href: '#experiencia', label: 'Experiencia' },
-  { href: "#proyectos", label: "Proyectos" },
-  { href: "#contacto", label: "Contacto" },
-];
+export const translations = {
+  es: {
+    navLinks: [
+      { href: "#inicio", label: "Inicio" },
+      { href: "#sobre-mi", label: "Sobre mí" },
+      { href: "#habilidades", label: "Habilidades" },
+      { href: "#proyectos", label: "Proyectos" },
+      { href: "#contacto", label: "Contacto" },
+    ],
+    header: {
+      languageLabel: "Seleccionar idioma",
+    },
+    hero: {
+      available: "Disponible para oportunidades",
+      contact: "Contactar",
+      downloadCv: "Descargar CV",
+      viewGithub: "Ver GitHub",
+    },
+    profile: {
+      role: "Desarrollador Full Stack | Estudiante de Ingeniería de Sistemas | Python | React | JavaScript | TypeScript | Node.js | c# | Sql | MongoDB | Power BI |",
+      tagline:
+        "Construyo interfaces web modernas, accesibles y con buen rendimiento. Me apasiona React, el diseño limpio y resolver problemas con código.",
+      about: [
+        "Estoy finalizando mi carrera en ingeniería de sistemas. Soy desarrollador con mentalidad Full Stack, apasionado por construir aplicaciones web completas, funcionales y escalables.",
+        "Tengo una base sólida en el desarrollo de interfaces modernas, complementada con experiencia en lógica de servidor y gestión de datos. Mi enfoque principal es el ecosistema JavaScript/TypeScript.",
+        "En mi tiempo libre disfruto trabajar en proyectos personales, aprender nuevas tecnologías y mantenerme al día con las tendencias del sector.",
+        "¡Conectemos para construir soluciones innovadoras!",
+      ],
+    },
+    about: {
+      title: "Sobre mí",
+      remote: "remoto",
+    },
+    skills: {
+      title: "Habilidades",
+      subtitle: "Tecnologías y herramientas que domino para dar vida a proyectos robustos.",
+      techCount: "tecnologías y herramientas",
+      categories: {
+        Frontend: "Frontend",
+        Backend: "Backend",
+        "Bases de datos": "Bases de datos",
+        Herramientas: "Herramientas",
+      },
+      levels: {
+        Intermedio: "Intermedio",
+        Avanzado: "Avanzado",
+      },
+    },
+    projects: {
+      title: "Proyectos",
+      subtitle: "Algunos proyectos recientes y personales.",
+      items: [
+        {
+          title: "Móvil-Dev E-commerce",
+          description:
+            "Ecosistema transaccional full-stack de alta complejidad con arquitectura desacoplada. Cuenta con sistema de carrito dual, checkout real con PayPal/ePayco, generación automatizada de facturas en PDF y un microservicio independiente para notificaciones de pedidos por WhatsApp.",
+        },
+        {
+          title: "APP-NOTES",
+          description:
+            "Aplicación Full-Stack para la gestión y organización de notas. Implementa una API REST con arquitectura segura (JWT/bcrypt), persistencia en MongoDB y un frontend reactivo y responsivo con filtrado dinámico en tiempo real.",
+        },
+        {
+          title: "easyBooking — Sistema de Citas Full-Stack",
+          description:
+            "[PROYECTO EN DESARROLLO] Plataforma integral para la reserva y automatización de turnos en tiempo real. Backend en Node.js/Express, persistencia con MongoDB y frontend reactivo en React y Vite.",
+        },
+        {
+          title: "SisSalud Rural — Gestión Médica e Inteligencia Epidemiológica",
+          description:
+            "[PROYECTO EN DESARROLLO] Sistema de información médica de impacto social para gestión de historias clínicas en centros de salud rurales. Arquitectura Full-Stack en TypeScript, alertas epidemiológicas con IA (Gemini API) y cumplimiento normativo (Ley 1581).",
+        },
+        {
+          title: "Universidad Digital",
+          description:
+            "[PROYECTO EN DESARROLLO] Plataforma integral de gestión académica con control de accesos por roles (Admin, Docente, Estudiante), API modular en FastAPI, frontend en React y CI/CD con GitHub Actions.",
+        },
+        {
+          title: "Próximo proyecto, trabajando en ello...",
+          description:
+            "Espacio reservado para un sistema de gestión de inventario con API REST segura (JWT/bcrypt), MongoDB, frontend reactivo y lector de códigos de barras, como en una tienda real.",
+        },
+      ],
+    },
+    contact: {
+      title: "Contacto",
+      subtitleBefore: "¿Interesado en trabajar juntos? Escríbeme a",
+      subtitleOr: "o conecta en",
+      namePlaceholder: "Escribe tu nombre",
+      emailPlaceholder: "Escribe tu correo electrónico",
+      messagePlaceholder: "Escribe tu mensaje...",
+      submit: "Enviar mensaje",
+      sentTitle: "¡Tu cliente de correo debería abrirse ahora!",
+      sentBody: "Si no es así, puedes copiar mi dirección y escribirme directamente a:",
+      mailSubject: "Contacto desde portfolio",
+    },
+    footer: {
+      portfolio: "Portfolio",
+      thanks: "Gracias por visitar mi sitio",
+      description:
+        "Desarrollador frontend enfocado en crear experiencias web claras, accesibles y con buen rendimiento. Abierto a colaborar en proyectos interesantes.",
+      quickNav: "Navegación rápida",
+      contact: "Contacto",
+      rights: "Todos los derechos reservados.",
+      builtWith: "Hecho con React y Tailwind CSS",
+    },
+  },
+  en: {
+    navLinks: [
+      { href: "#inicio", label: "Home" },
+      { href: "#sobre-mi", label: "About" },
+      { href: "#habilidades", label: "Skills" },
+      { href: "#proyectos", label: "Projects" },
+      { href: "#contacto", label: "Contact" },
+    ],
+    header: {
+      languageLabel: "Select language",
+    },
+    hero: {
+      available: "Open to opportunities",
+      contact: "Get in touch",
+      downloadCv: "Download CV",
+      viewGithub: "View GitHub",
+    },
+    profile: {
+      role: "Developer Full Stack | Systems Engineering Student |Python | React | JavaScript | TypeScript | Node.js | c# | Sql | MongoDB | Power BI |",
+      tagline:
+        "I build modern, accessible, high-performance web interfaces. I'm passionate about React, clean design, and solving problems with code.",
+      about: [
+        "I am completing my degree in systems engineering. I am a developer with a Full Stack mindset, passionate about building complete, functional, and scalable web applications.",
+        "I have a solid foundation in developing modern interfaces, complemented by experience in server logic and data management. My primary focus is the JavaScript/TypeScript ecosystem.",
+        "In my free time, I enjoy working on personal projects, learning new technologies, and staying up to date with industry trends.",
+        "Let's connect to build innovative solutions!",
+      ],
+    },
+    about: {
+      title: "About me",
+      remote: "remote",
+    },
+    skills: {
+      title: "Skills",
+      subtitle: "Technologies and tools I use to build robust projects.",
+      techCount: "technologies and tools",
+      categories: {
+        Frontend: "Frontend",
+        Backend: "Backend",
+        "Bases de datos": "Databases",
+        Herramientas: "Tools",
+      },
+      levels: {
+        Intermedio: "Intermediate",
+        Avanzado: "Advanced",
+      },
+    },
+    projects: {
+      title: "Projects",
+      subtitle: "Some recent and personal projects.",
+      items: [
+        {
+          title: "Móvil-Dev E-commerce",
+          description:
+            "High-complexity full-stack transactional ecosystem with a decoupled architecture. Features a dual cart system, real checkout with PayPal/ePayco, automated PDF invoice generation, and a standalone microservice for WhatsApp order notifications.",
+        },
+        {
+          title: "APP-NOTES",
+          description:
+            "Full-Stack application for managing and organizing notes. Implements a secure REST API (JWT/bcrypt), MongoDB persistence, and a reactive, responsive frontend with real-time dynamic filtering.",
+        },
+        {
+          title: "easyBooking — Full-Stack Appointment System",
+          description:
+            "[IN DEVELOPMENT] Comprehensive platform for real-time appointment booking and automation. Node.js/Express backend, MongoDB persistence, and a reactive React + Vite frontend.",
+        },
+        {
+          title: "SisSalud Rural — Medical Management & Epidemiological Intelligence",
+          description:
+            "[IN DEVELOPMENT] Social-impact medical information system for managing clinical records in rural health centers. Full-Stack TypeScript architecture, AI-assisted epidemiological alerts (Gemini API), and regulatory compliance (Law 1581).",
+        },
+        {
+          title: "Universidad Digital",
+          description:
+            "[IN DEVELOPMENT] Comprehensive academic management platform with role-based access (Admin, Teacher, Student), modular FastAPI backend, React frontend, and CI/CD with GitHub Actions.",
+        },
+        {
+          title: "Next project — work in progress...",
+          description:
+            "Reserved space for an inventory management system with a secure REST API (JWT/bcrypt), MongoDB, a reactive frontend, and barcode scanning — like a real store.",
+        },
+      ],
+    },
+    contact: {
+      title: "Contact",
+      subtitleBefore: "Interested in working together? Email me at",
+      subtitleOr: "or connect on",
+      namePlaceholder: "Your name",
+      emailPlaceholder: "Your email address",
+      messagePlaceholder: "Your message...",
+      submit: "Send message",
+      sentTitle: "Your email client should open now!",
+      sentBody: "If it doesn't, you can copy my address and write to me directly at:",
+      mailSubject: "Contact from portfolio",
+    },
+    footer: {
+      portfolio: "Portfolio",
+      thanks: "Thanks for visiting my site",
+      description:
+        "Frontend developer focused on building clear, accessible, high-performance web experiences. Open to collaborating on interesting projects.",
+      quickNav: "Quick navigation",
+      contact: "Contact",
+      rights: "All rights reserved.",
+      builtWith: "Built with React and Tailwind CSS",
+    },
+  },
+};

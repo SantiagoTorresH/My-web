@@ -1,6 +1,7 @@
 import { profile } from '../../data/profile'
+import { SkillIcon } from '../SkillIcon'
 
-export function Skills() {
+export function Skills({ t }) {
   return (
     <section 
       id="habilidades" 
@@ -19,10 +20,10 @@ export function Skills() {
         {/* Encabezado Limpio y Profesional */}
         <div className="mb-12 border-l-4 border-orange-500 pl-4">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-white">
-            Habilidades
+            {t.skills.title}
           </h2>
           <p className="mt-2 text-base text-slate-400">
-            Tecnologías y herramientas que domino para dar vida a proyectos robustos.
+            {t.skills.subtitle}
           </p>
         </div>
 
@@ -34,21 +35,26 @@ export function Skills() {
               className="rounded-3xl border border-white/10 bg-slate-900/60 p-6 shadow-lg shadow-slate-950/10 backdrop-blur-sm"
             >
               <h3 className="text-lg font-semibold text-white">
-                {category.category}
+                {t.skills.categories[category.category] || category.category}
               </h3>
               <p className="mt-2 text-sm text-slate-400">
-                {category.items.length} tecnologías y herramientas.
+                {category.items.length} {t.skills.techCount}
               </p>
 
               <div className="mt-6 space-y-4">
                 {category.items.map(({ name, level, proficiency }) => (
                   <div key={name} className="rounded-3xl border border-white/10 bg-slate-950/70 p-4">
                     <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                      <div>
-                        <p className="font-medium text-slate-100">{name}</p>
-                        <span className="text-xs uppercase tracking-[0.22em] text-orange-300/90">
-                          {level}
-                        </span>
+                      <div className="flex items-center gap-3">
+                        <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/5 p-2">
+                          <SkillIcon name={name} className="size-7" />
+                        </div>
+                        <div>
+                          <p className="font-medium text-slate-100">{name}</p>
+                          <span className="text-xs uppercase tracking-[0.22em] text-orange-300/90">
+                            {t.skills.levels[level] || level}
+                          </span>
+                        </div>
                       </div>
                       <div className="flex items-center gap-2 text-amber-300">
                         {Array.from({ length: 5 }).map((_, index) => (

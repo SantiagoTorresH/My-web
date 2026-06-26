@@ -1,10 +1,10 @@
 import { useEffect, useRef } from 'react'
 
 // Número total de partículas (neuronas)
-const NEURON_COUNT = 60
+const NEURON_COUNT = 110
 
 // Distancia máxima para que dos neuronas se conecten con una línea
-const CONNECTION_DISTANCE = 150
+const CONNECTION_DISTANCE = 130
 
 export function NeuronCanvas() {
 

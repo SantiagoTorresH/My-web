@@ -7,7 +7,7 @@ const initialForm = {
   message: '',
 }
 
-export function ContactForm() {
+export function ContactForm({ t }) {
   const [formData, setFormData] = useState(initialForm)
   const [sent, setSent] = useState(false)
 
@@ -22,7 +22,7 @@ export function ContactForm() {
 
     if (!name || !email || !message) return
 
-    const subject = `Contacto desde portfolio - ${name}`
+    const subject = `${t.contact.mailSubject} - ${name}`
     const body = `Nombre: ${name}\nEmail: ${email}\n\nMensaje:\n${message}`
     window.location.href = `mailto:${profile.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
     setSent(true)
@@ -46,14 +46,14 @@ export function ContactForm() {
         {/* Encabezado Profesional */}
         <div className="mb-10 border-l-4 border-orange-500 pl-4">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-white">
-            Contacto
+            {t.contact.title}
           </h2>
           <p className="mt-2 text-base text-slate-400">
-            ¿Interesado en trabajar juntos? Escríbeme a{' '}
+            {t.contact.subtitleBefore}{' '}
             <a href={`mailto:${profile.email}`} className="text-brand-lime font-medium hover:underline transition-all">
               {profile.email}
             </a>{' '}
-            o conecta en{' '}
+            {t.contact.subtitleOr}{' '}
             <a href={profile.social[0]?.href} target="_blank" rel="noopener noreferrer" className="text-brand-lime font-medium hover:underline transition-all">
               LinkedIn
             </a>.
@@ -63,9 +63,9 @@ export function ContactForm() {
         {sent ? (
           /* Estado Enviado Estilizado */
           <div className="rounded-xl border border-emerald-500/30 bg-emerald-950/40 p-6 backdrop-blur-sm text-slate-300">
-            <p className="mb-3 font-semibold text-emerald-400 text-lg">¡Tu cliente de correo debería abrirse ahora!</p>
+            <p className="mb-3 font-semibold text-emerald-400 text-lg">{t.contact.sentTitle}</p>
             <p className="text-sm text-slate-400 leading-relaxed">
-              Si no es así, puedes copiar mi dirección y escribirme directamente a:{' '}
+              {t.contact.sentBody}{' '}
               <a href={`mailto:${profile.email}`} className="font-medium text-white underline hover:text-orange-400 transition-colors">
                 {profile.email}
               </a>
@@ -80,7 +80,7 @@ export function ContactForm() {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                placeholder="Escribe tu nombre"
+                placeholder={t.contact.namePlaceholder}
                 required
                 className="w-full rounded-xl border border-white/10 bg-slate-900/50 px-4 py-3.5 text-white placeholder:text-slate-500 outline-none transition-all duration-200 focus:border-orange-500/50 focus:bg-slate-900/80 focus:ring-1 focus:ring-orange-500/20"
               />
@@ -92,7 +92,7 @@ export function ContactForm() {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                placeholder="Escribe tu correo electrónico"
+                placeholder={t.contact.emailPlaceholder}
                 required
                 className="w-full rounded-xl border border-white/10 bg-slate-900/50 px-4 py-3.5 text-white placeholder:text-slate-500 outline-none transition-all duration-200 focus:border-orange-500/50 focus:bg-slate-900/80 focus:ring-1 focus:ring-orange-500/20"
               />
@@ -103,7 +103,7 @@ export function ContactForm() {
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                placeholder="Escribe tu mensaje..."
+                placeholder={t.contact.messagePlaceholder}
                 rows={5}
                 required
                 className="w-full resize-none rounded-xl border border-white/10 bg-slate-900/50 px-4 py-3.5 text-white placeholder:text-slate-500 outline-none transition-all duration-200 focus:border-orange-500/50 focus:bg-slate-900/80 focus:ring-1 focus:ring-orange-500/20"
@@ -114,7 +114,7 @@ export function ContactForm() {
               type="submit"
               className="mt-2 rounded-xl bg-gradient-to-r from-orange-500 to-amber-500 px-6 py-3.5 font-semibold text-slate-950 transition-all duration-300 hover:opacity-90 hover:shadow-lg hover:shadow-orange-500/20 active:scale-[0.98]"
             >
-              Enviar mensaje
+              {t.contact.submit}
             </button>
           </form>
         )}
